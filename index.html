@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nature Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    header a:hover {
+      color: #ccc;
+    }
+    #search-bar {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+    }
+    #search-bar input[type="text"] {
+      border: none;
+      background-color: #fff;
+      padding: 5px;
+      margin-right: 5px;
+    }
+    #content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    .page {
+      width: 45%;
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .filter-box {
+      margin-bottom: 10px;
+    }
+    .list-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .list-item:hover {
+      background-color: #f5f5f5;
+    }
+    .list-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    .list-item h3 {
+      margin: 0;
+      margin-right: 10px;
+    }
+    .list-item p {
+      margin: 0;
+    }
+    #community-page form {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    #community-page label {
+      flex-basis: 100%;
+      margin-bottom: 5px;
+    }
+    #community-page input[type="file"] {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+    }
+    #community-page textarea {
+      flex-basis: 100%;
+      margin-bottom: 10px;
+    }
+    #community-page .post {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    #community-page .post img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    #community-page .post p {
+      flex-basis: 100%;
+    }
+  </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <a href="#explore-page">Explore</a>
+        <a href="#community-page">Community</a>
+      </nav>
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
+    </header>
+    <main>
+      <section id="explore-page">
+        <h1>Explore Page</h1>
+        <div id="filter-box">
+          <button id="filter-plants">Plants</button>
+          <button id="filter-animals">Animals</button>
+          <button id="filter-all">All</button>
+        </div>
+        <ul id="list"></ul>
+      </section>
+      <section id="community-page">
+        <h1>Community Page</h1>
+        <button id="add-post-button">Add Post</button>
+        <form id="post-form" style="display: none;">
+          <input type="file" id="post-image" accept="image/*">
+          <textarea id="post-description" placeholder="Write a description..."></textarea>
+          <button type="submit">Post</button>
+        </form>
+        <ul id="posts"></ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+  </html>
